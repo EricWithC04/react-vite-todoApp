@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 
 export const AddTodo = ({ setListTodos, listTodos }) => {
 
-    const [ todo, setTodo ] = useState("")
+    // Lógica para añadir un todo
+    const [todo, setTodo] = useState("")
 
     const handleChange = (e) => {
         e.preventDefault()
@@ -20,12 +21,12 @@ export const AddTodo = ({ setListTodos, listTodos }) => {
                 done: false
             }
 
-        setListTodos([
-            ...listTodos,
-            newTodo
-        ])
+            setListTodos([
+                ...listTodos,
+                newTodo
+            ])
 
-        setTodo("")
+            setTodo("")
         }
     }
 
